@@ -7,12 +7,17 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  background: #576851;
+
+body{
+  background-color: #576851;
   color: white;
   overflow: hidden;
   overflow-y: scroll;
 }
+
+/*.body_home {
+  background-image: linear-gradient(to right, #576851 0%, #576851 50%, #A58567 50%, #A58567 100%);
+}*/
 
 a {
   text-decoration: none;
