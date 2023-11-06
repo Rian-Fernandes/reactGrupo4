@@ -8,6 +8,7 @@ function Home() {
         document.body.style = 'background-image: linear-gradient(to right, #576851 0%, #576851 50%, #A58567 50%, #A58567 100%);';
     },[])
   return (
+    <>
     <section className={styles.home_container}>
         <h1>
             Bem vindo ao <span>Flor & Folha</span>
@@ -16,6 +17,7 @@ function Home() {
         <LinkButton to="/newproject" text="Cadastrar"/>
         <img src={woman}/>
     </section>
+    </>
   )
      
 }

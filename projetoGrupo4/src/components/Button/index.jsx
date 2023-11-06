@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from 'prop-types';
 import * as C from "./style";
 
 const Button = ({ Text, onClick, Type = "button", disabled }) => {
@@ -12,6 +12,13 @@ const Button = ({ Text, onClick, Type = "button", disabled }) => {
       {Text}
     </C.Button>
   );
+}
+
+Button.propTypes = {
+  Text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  Type: PropTypes.string, 
+  disabled: PropTypes.bool, 
 };
 
 export default Button;

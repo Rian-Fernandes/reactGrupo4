@@ -3,40 +3,44 @@ import Home from "./components/Pages/Home";
 import Contact from "./components/Pages/Contact";
 import Company from "./components/Pages/Company";
 import NewProject from "./components/Pages/NewProject";
-import Navbar from './components/layout/Navbar'
-import Footer from './components/layout/Footer'
 import Container from "./components/layout/Container";
 import Projects from "./components/Pages/Projects";
-
-import { useState } from "react";
 import "./App.css";
-import Signin from "./pages/signin/index";
-import Signup from "./pages/signup/index";
+import Signin from "./components/Pages/signin/index";
+import Signup from "./components/Pages/signup/index";
 import useAuth from "./hooks/useAuth";
 import { AuthProvider } from "./contexts/auth";
+import PropTypes from 'prop-types';
 
 const Private = ({ Item }) => {
   const { signed } = useAuth();
 
   return signed > 0 ? <Item /> : <Signin />;
 };
-
-const App = () => {
-  return (
-    <Router>
-      <Navbar/>
+  const App = () => {
+    return (
+      <>
+      <Router>
       <Container customClass="min_height">
+      <AuthProvider>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/company" element={<Company />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/newproject" element={<NewProject />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
-      </Container>
-      <Footer/>
-    </Router>
-  );
+          <Route path="/" element={<Signin />} />
+          <Route path="*" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+            <Route path="/home"element={<Private Item={Home} />} /> 
+            <Route path="/company" element={<Company />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/newproject" element={<NewProject />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+          </AuthProvider>
+        </Container>
+      </Router>
+      </>
+    );
+  };
+Private.propTypes = {
+  Item: PropTypes.elementType.isRequired,
 };
 
 export default App;
