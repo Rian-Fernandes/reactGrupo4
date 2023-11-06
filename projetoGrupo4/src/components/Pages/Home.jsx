@@ -1,6 +1,5 @@
 import styles from "./Home.module.css";
 import { useEffect } from "react";
-import woman from "../../Images/woman.png";
 import LinkButton from "../layout/LinkButton";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -22,7 +21,6 @@ function Home() {
         </h1>
         <p>Comece a gerenciar os seus produtos agora mesmo!</p>
         <LinkButton to="/newproject" text="Cadastrar" />
-        <img src={woman} />
       </section>
       <Footer />
     </>
