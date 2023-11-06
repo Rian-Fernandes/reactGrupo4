@@ -4,7 +4,6 @@ import woman from "../../Images/woman.png";
 import LinkButton from "../layout/LinkButton";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import Button from "../Button";
 
 function Home() {
   useEffect(() => {
@@ -19,9 +18,7 @@ function Home() {
         </h1>
         <p>Comece a gerenciar os seus projetos agora mesmo!</p>
         <LinkButton to="/newproject" text="Cadastrar" />
-        <Button Text="Sair" onClick={() => [signout(), navigate("/")]}>
-          Sair
-        </Button>
+        <img src={woman} />
       </section>
     </>
   );
