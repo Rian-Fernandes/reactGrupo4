@@ -4,9 +4,9 @@ import Button from "../../Button";
 import * as C from "./style";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
+import bglogin from "../signin/bglogin.png";
 
 const Signin = () => {
-  
   const { signin } = useAuth();
   const navigate = useNavigate();
 
@@ -31,7 +31,7 @@ const Signin = () => {
   };
 
   return (
-    <C.Container>
+    <C.Container className="signin-container">
       <C.Label>SISTEMA DE LOGIN</C.Label>
       <C.Content>
         <Input

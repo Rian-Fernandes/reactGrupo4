@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bglogin from "../signin/bglogin.png";
 
 export const Container = styled.div`
   display: flex;
@@ -7,6 +8,9 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 10px;
   height: 100vh;
+  &.signin-container {
+    background-image: url(${bglogin});
+    background-size: cover;
 `;
 export const Content = styled.div`
   gap: 15px;
