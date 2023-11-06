@@ -1,17 +1,23 @@
 {
   "projects": [
     {
-      "name": "Maconha",
-      "budget": "10",
+      "name": "Cristian",
+      "budget": "15000",
       "category": {
-        "id": "2",
-        "name": "Suculenta"
+        "id": "1",
+        "name": "Cacto"
       },
       "cost": 0,
       "services": [],
       "id": 1
     },
     {
+      "name": "Teste",
+      "budget": "213121",
+      "category": {
+        "id": "2",
+        "name": "Suculenta"
+      },
       "cost": 0,
       "services": [],
       "id": 2

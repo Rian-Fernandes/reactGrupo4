@@ -11,6 +11,8 @@ import ProjectForm from "../project/ProjectForm";
 import Message from "../layout/Message";
 import ServiceForm from "../service/ServiceForm";
 import ServiceCard from "../service/ServiceCard";
+import Navbar from "../layout/Navbar";
+import Footer from "../layout/Footer";
 
 function Project() {
   let { id } = useParams();
@@ -136,6 +138,7 @@ function Project() {
 
   return (
     <>
+      <Navbar />
       {project.name ? (
         <div className={styles.project_details}>
           <Container customClass="column">
@@ -199,6 +202,7 @@ function Project() {
       ) : (
         <Loading />
       )}
+      <Footer />
     </>
   );
 }

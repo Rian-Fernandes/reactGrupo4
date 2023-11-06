@@ -1,29 +1,29 @@
-footer{
-    color: #Fff;
-    padding: 1.5em;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    /*background-color: #e7e7d2;*/
+footer {
+  color: #fff;
+  padding: 1.5em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #e7e7d2;
 }
 
-.social_list{
-    display: flex;
-    justify-content: end;
-    list-style: none;
-    font-family: 'Nanum Myeongjo', serif;
+.social_list {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  font-family: "Nanum Myeongjo", serif;
 }
 
-.social_list li{
-    margin: 0 1em;
+.social_list li {
+  margin: 0 1em;
 }
 
-.social_list li:hover{
-    color: #576851;
+.social_list li:hover {
+  color: #576851;
 }
 
-.copy_right span{
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: 14px;
+.copy_right span {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 14px;
 }

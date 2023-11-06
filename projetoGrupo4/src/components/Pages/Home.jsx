@@ -12,6 +12,7 @@ function Home() {
     document.body.style =
       "background-image: linear-gradient(to right, #576851 0%, #576851 50%, #A58567 50%, #A58567 100%),";
   }, []);
+
   return (
     <>
       <Navbar />

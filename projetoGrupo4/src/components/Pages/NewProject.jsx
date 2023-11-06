@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import ProjectForm from "../project/ProjectForm";
 
 import styles from "./NewProject.module.css";
+import Navbar from "../layout/Navbar";
+import Footer from "../layout/Footer";
 
 function NewProject() {
   const navigate = useNavigate();
@@ -25,11 +27,16 @@ function NewProject() {
   }
 
   return (
-    <div className={styles.newproject_container}>
-      <h1>Adicionar Produto</h1>
-      <p>Adicione o seu produto para depois adicionar a descrição</p>
-      <ProjectForm handleSubmit={createPost} btnText="Criar Produto" />
-    </div>
+    <>
+      <Navbar />
+
+      <div className={styles.newproject_container}>
+        <h1>Adicionar Produto</h1>
+        <p>Adicione o seu produto para depois adicionar a descrição</p>
+        <ProjectForm handleSubmit={createPost} btnText="Criar Produto" />
+      </div>
+      <Footer />
+    </>
   );
 }
 

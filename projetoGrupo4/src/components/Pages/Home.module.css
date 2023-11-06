@@ -5,6 +5,11 @@
   align-items: flex-start;
   justify-content: center;
   padding: 4em;
+  background: url("../../Images/test.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
 }
 
 .home_container h1 {
