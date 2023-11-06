@@ -22,20 +22,18 @@ const App = () => {
   return (
     <>
       <Router>
-        <Container customClass="min_height">
-          <AuthProvider>
-            <Routes>
-              <Route path="/" element={<Signin />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/home" element={<Private Item={Home} />} />
-              <Route path="/company" element={<Company />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/newproject" element={<NewProject />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/project/:id" element={<Project />} />
-            </Routes>
-          </AuthProvider>
-        </Container>
+        <AuthProvider>
+          <Routes>
+            <Route path="/" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/home" element={<Private Item={Home} />} />
+            <Route path="/company" element={<Company />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/newproject" element={<NewProject />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/project/:id" element={<Project />} />
+          </Routes>
+        </AuthProvider>
       </Router>
     </>
   );
