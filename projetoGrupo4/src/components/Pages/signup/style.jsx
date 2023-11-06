@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import plantadireita from "../signup/plantadireita.png";
 
 export const Container = styled.div`
   display: flex;
@@ -7,6 +8,9 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 10px;
   height: 100vh;
+  &.signup-container {
+    background-image: url(${plantadireita});
+    background-size: cover;
 `;
 
 export const Content = styled.div`
@@ -21,6 +25,7 @@ export const Content = styled.div`
   max-width: 350px;
   padding: 20px;
   border-radius: 5px;
+  margin-right: 50rem;
 `;
 
 export const Label = styled.label`

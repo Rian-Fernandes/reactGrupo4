@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import Input from "../../input";
 import Button from "../../Button";
 import * as C from "./style";
@@ -38,8 +38,7 @@ const Signup = () => {
   };
 
   return (
-    <C.Container>
-      <C.Label>SISTEMA DE LOGIN</C.Label>
+    <C.Container className="signup-container">
       <C.Content>
         <Input
           type="email"
