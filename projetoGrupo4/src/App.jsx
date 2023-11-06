@@ -8,12 +8,24 @@ import Footer from './components/layout/Footer'
 import Container from "./components/layout/Container";
 import Projects from "./components/Pages/Projects";
 
+import { useState } from "react";
+import "./App.css";
+import Signin from "./pages/signin/index";
+import Signup from "./pages/signup/index";
+import useAuth from "./hooks/useAuth";
+import { AuthProvider } from "./contexts/auth";
 
-function App() {
+const Private = ({ Item }) => {
+  const { signed } = useAuth();
+
+  return signed > 0 ? <Item /> : <Signin />;
+};
+
+const App = () => {
   return (
     <Router>
       <Navbar/>
-        <Container customClass = "min_height">
+      <Container customClass="min_height">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/company" element={<Company />} />
@@ -21,12 +33,10 @@ function App() {
           <Route path="/newproject" element={<NewProject />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
-        
-        </Container>
-        <Footer/>
-
+      </Container>
+      <Footer/>
     </Router>
   );
-}
+};
 
 export default App;
