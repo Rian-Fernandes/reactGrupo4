@@ -12,8 +12,8 @@
       "id": 2
     },
     {
-      "name": "Projeto Final",
-      "budget": "15000",
+      "name": "Maconha",
+      "budget": "10",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
@@ -21,6 +21,17 @@
       "cost": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "name": "Ajuda aí",
+      "budget": "15000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
     }
   ],
   "categories": [

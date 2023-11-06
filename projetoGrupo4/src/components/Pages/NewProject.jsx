@@ -20,15 +20,15 @@ function NewProject() {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        navigate("/projects", { message: "Projeto criado com sucesso!" });
+        navigate("/projects", { message: "Produto criado com sucesso!" });
       });
   }
 
   return (
     <div className={styles.newproject_container}>
-      <h1>Criar Projeto</h1>
-      <p>Crie seu projeto para depois adicionar os serviços</p>
-      <ProjectForm handleSubmit={createPost} btnText="Criar Projeto" />
+      <h1>Adicionar Produto</h1>
+      <p>Adicione o seu produto para depois adicionar a descrição</p>
+      <ProjectForm handleSubmit={createPost} btnText="Criar Produto" />
     </div>
   );
 }

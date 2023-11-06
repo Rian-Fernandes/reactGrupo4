@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
+import woman from "../../Images/woman.png";
 
 import { BsPencil, BsFillTrashFill } from "react-icons/bs";
 
@@ -12,6 +13,7 @@ function ProjectCard({ id, name, budget, category, handleRemove }) {
   return (
     <div className={styles.project_card}>
       <h4>{name}</h4>
+      <div>{/* <img src={woman} /> */}</div>
       <p>
         <span>Orçamento:</span> R${budget}
       </p>

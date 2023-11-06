@@ -4,6 +4,7 @@ import Select from "../form/Select";
 import SubmitButton from "../form/SubmitButton";
 
 import styles from "./ProjectForm.module.css";
+import ImageCard from "../form/ImageCard";
 
 function ProjectForm({ handleSubmit, btnText, projectData }) {
   const [project, setProject] = useState(projectData || {});
@@ -45,15 +46,15 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
     <form onSubmit={submit} className={styles.form}>
       <Input
         type="text"
-        text="Nome do projeto"
+        text="Nome do produto"
         name="name"
-        placeholder="Insira o nome do projeto"
+        placeholder="Insira o nome do produto"
         handleOnChange={handleChange}
         value={project.name ? project.name : ""}
       />
       <Input
         type="number"
-        text="Orçamento do projeto"
+        text="Orçamento do produto"
         name="budget"
         placeholder="Insira o orçamento total"
         handleOnChange={handleChange}
@@ -66,6 +67,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         handleOnChange={handleCategory}
         value={project.category ? project.category.id : ""}
       />
+      <ImageCard />
       <SubmitButton text={btnText} />
     </form>
   );
