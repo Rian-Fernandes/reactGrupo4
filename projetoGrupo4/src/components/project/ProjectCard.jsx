@@ -15,7 +15,7 @@ function ProjectCard({ id, name, budget, category, handleRemove }) {
       <h4>{name}</h4>
       <div>{/* <img src={woman} /> */}</div>
       <p>
-        <span>Orçamento:</span> R${budget}
+        <span>Preço do produto:</span> R${budget}
       </p>
       <p className={styles.category_text}>
         <span className={`${styles[category.toLowerCase()]}`}></span> {category}

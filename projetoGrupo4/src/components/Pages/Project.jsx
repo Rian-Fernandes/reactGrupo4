@@ -43,7 +43,7 @@ function Project() {
   function editPost(project) {
     // budget validation
     if (project.budget < project.cost) {
-      setMessage("O Orçamento não pode ser menor que o custo do produto!");
+      setMessage("O Preço não pode ser menor que o custo do produto!");
       setType("error");
       return false;
     }
@@ -76,7 +76,7 @@ function Project() {
 
     // maximum value validation
     if (newCost > parseFloat(project.budget)) {
-      setMessage("Orçamento ultrapassado, verifique o valor do serviço!");
+      setMessage("Preço ultrapassado, verifique o valor do serviço!");
       setType("error");
       project.services.pop();
       return false;
@@ -151,10 +151,7 @@ function Project() {
                     <span>Categoria:</span> {project.category.name}
                   </p>
                   <p>
-                    <span>Total do orçamento:</span> R${project.budget}
-                  </p>
-                  <p>
-                    <span>Total utilizado:</span> R${project.cost}
+                    <span>Preço do Produto:</span> R${project.budget}
                   </p>
                 </div>
               ) : (
