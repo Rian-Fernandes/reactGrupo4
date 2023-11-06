@@ -1,0 +1,37 @@
+.home_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4em;
+    
+}
+
+.home_container h1{
+    font-size:2em;
+    margin-bottom: .5em;
+    text-align: left;
+    font-family: 'Nanum Myeongjo', serif;
+
+}
+
+.home_container p{
+    text-align: left;
+    font-family: 'Nanum Myeongjo', serif;
+
+}
+
+.home_container h1 span{
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.home_container img{
+    width: 900px;
+    margin: 1em 0;
+    position: absolute;
+    bottom: -200px; /* Alinhe à base da tela */
+    left: 50%; /* Alinhe horizontalmente no centro */
+    transform: translateX(-50%); /* Ajuste para alinhar horizontalmente no centro */
+    z-index: -1;
+}

@@ -1,7 +1,15 @@
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from "./components/Pages/Home";
+import Contact from "./components/Pages/Contact";
+import Company from "./components/Pages/Company";
+import NewProject from "./components/Pages/NewProject";
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+import Container from "./components/layout/Container";
+import Projects from "./components/Pages/Projects";
+
 import { useState } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/home/index";
 import Signin from "./pages/signin/index";
 import Signup from "./pages/signup/index";
 import useAuth from "./hooks/useAuth";
@@ -15,16 +23,19 @@ const Private = ({ Item }) => {
 
 const App = () => {
   return (
-    <>
-      <AuthProvider>
+    <Router>
+      <Navbar/>
+      <Container customClass="min_height">
         <Routes>
-          <Route exact path="/home" element={<Private Item={Home} />} />
-          <Route path="/" element={<Signin />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route path="*" element={<Signin />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/company" element={<Company />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/newproject" element={<NewProject />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
-      </AuthProvider>
-    </>
+      </Container>
+      <Footer/>
+    </Router>
   );
 };
 
