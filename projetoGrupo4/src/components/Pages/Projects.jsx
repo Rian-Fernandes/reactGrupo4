@@ -11,6 +11,7 @@ import Message from "../layout/Message";
 import styles from "./Projects.module.css";
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
+import axios from "axios"; // Import Axios
 
 function Projects() {
   useEffect(() => {
@@ -31,43 +32,31 @@ function Projects() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:5000/projects", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      try {
+        const response = await axios.get("http://localhost:5000/projects");
+        setAllProjects(response.data);
+        setProjects(response.data);
 
-      const json = await response.json();
-      setAllProjects(json);
-      setProjects(json);
-
-      const catResponse = await fetch("http://localhost:5000/categories", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      const catJson = await catResponse.json();
-      setCategories(catJson);
-      setRemoveLoading(true);
+        const catResponse = await axios.get("http://localhost:5000/categories");
+        setCategories(catResponse.data);
+        setRemoveLoading(true);
+      } catch (error) {
+        // Handle error here
+      }
     };
 
     fetchData();
   }, []);
 
   function removeProject(id) {
-    fetch(`http://localhost:5000/projects/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
+    axios
+      .delete(`http://localhost:5000/projects/${id}`)
       .then(() => {
         setProjects(projects.filter((project) => project.id !== id));
         setProjectMessage("Produto removido com sucesso!");
+      })
+      .catch((error) => {
+        // Handle error here
       });
   }
 

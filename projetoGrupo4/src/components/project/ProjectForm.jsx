@@ -5,21 +5,24 @@ import SubmitButton from "../form/SubmitButton";
 
 import styles from "./ProjectForm.module.css";
 import ImageCard from "../form/ImageCard";
+import axios from "axios";
 
 function ProjectForm({ handleSubmit, btnText, projectData }) {
   const [project, setProject] = useState(projectData || {});
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/categories", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setCategories(data);
+    axios
+      .get("http://localhost:5000/categories", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        setCategories(response.data);
+      })
+      .catch((error) => {
+        // Handle error here
       });
   }, []);
 

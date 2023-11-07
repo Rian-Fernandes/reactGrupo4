@@ -29,9 +29,15 @@
         "id": "1",
         "name": "Cacto"
       },
-      "cost": 0,
-      "services": [],
-      "id": 4
+      "cost": null,
+      "services": [
+        {
+          "description": "Trata-se de um cacto do deserto...",
+          "id": "9a286a12-8325-4218-be20-687530b0187a"
+        }
+      ],
+      "id": 4,
+      "url": "https://dw0jruhdg6fis.cloudfront.net/producao/26031872/G/cacto-medio-com-espinhos-no-vaso-.webp"
     },
     {
       "name": "Cacto",
@@ -55,6 +61,30 @@
       "cost": 0,
       "services": [],
       "id": 6
+    },
+    {
+      "name": "Plantinha",
+      "budget": "20",
+      "url": "https://img.freepik.com/fotos-premium/uma-plantinha-esta-na-terra-e-as-folhas-verdes-sao-verdes_849715-2645.jpg",
+      "category": {
+        "id": "2",
+        "name": "Suculenta"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 7
+    },
+    {
+      "name": "Rian",
+      "budget": "20",
+      "category": {
+        "id": "2",
+        "name": "Suculenta"
+      },
+      "url": "https://dw0jruhdg6fis.cloudfront.net/producao/26031872/G/cacto-medio-com-espinhos-no-vaso-.webp",
+      "cost": 0,
+      "services": [],
+      "id": 8
     }
   ],
   "categories": [

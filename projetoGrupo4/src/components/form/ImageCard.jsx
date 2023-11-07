@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./ImageCard.module.css"; // Certifique-se de importar seus estilos corretamente
+import styles from "./ImageCard.module.css";
 
 function ImageCard() {
   const [image, setImage] = useState(null);

@@ -1,10 +1,7 @@
 import { parse, v4 as uuidv4 } from "uuid";
-
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-
 import styles from "./Project.module.css";
-
 import Loading from "../layout/Loading";
 import Container from "../layout/Container";
 import ProjectForm from "../project/ProjectForm";
@@ -13,6 +10,7 @@ import ServiceForm from "../service/ServiceForm";
 import ServiceCard from "../service/ServiceCard";
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
+import axios from "axios"; // Import Axios
 
 function Project() {
   let { id } = useParams();
@@ -24,50 +22,40 @@ function Project() {
   const [type, setType] = useState("success");
 
   useEffect(() => {
-    // Para ver o loading
-    setTimeout(
-      () =>
-        fetch(`http://localhost:5000/projects/${id}`, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
+    setTimeout(() => {
+      axios
+        .get(`http://localhost:5000/projects/${id}`)
+        .then((response) => {
+          setProject(response.data);
+          setServices(response.data.services);
         })
-          .then((resp) => resp.json())
-          .then((data) => {
-            setProject(data);
-            setServices(data.services);
-          }),
-      0
-    );
+        .catch((error) => {
+          // Handle error here
+        });
+    }, 0);
   }, [id]);
 
   function editPost(project) {
-    // budget validation
     if (project.budget < project.cost) {
       setMessage("O Preço não pode ser menor que o custo do produto!");
       setType("error");
       return false;
     }
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(project),
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setProject(data);
+    axios
+      .patch(`http://localhost:5000/projects/${project.id}`, project)
+      .then((response) => {
+        setProject(response.data);
         setShowProjectForm(!showProjectForm);
         setMessage("Produto atualizado!");
         setType("success");
+      })
+      .catch((error) => {
+        // Handle error here
       });
   }
 
   function createService(project) {
-    // last service
     const lastService = project.services[project.services.length - 1];
 
     lastService.id = uuidv4();
@@ -76,7 +64,6 @@ function Project() {
 
     const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost);
 
-    // maximum value validation
     if (newCost > parseFloat(project.budget)) {
       setMessage("Preço ultrapassado, verifique o valor do serviço!");
       setType("error");
@@ -84,22 +71,18 @@ function Project() {
       return false;
     }
 
-    // add service cost to project cost total
     project.cost = newCost;
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(project),
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setServices(data.services);
+    axios
+      .patch(`http://localhost:5000/projects/${project.id}`, project)
+      .then((response) => {
+        setServices(response.data.services);
         setShowServiceForm(!showServiceForm);
         setMessage("Serviço adicionado!");
         setType("success");
+      })
+      .catch((error) => {
+        // Handle error here
       });
   }
 
@@ -113,19 +96,17 @@ function Project() {
     projectUpdated.services = servicesUpdated;
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
 
-    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(projectUpdated),
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
+    axios
+      .patch(
+        `http://localhost:5000/projects/${projectUpdated.id}`,
+        projectUpdated
+      )
+      .then((response) => {
         setProject(projectUpdated);
         setServices(servicesUpdated);
         setMessage("Serviço removido com sucesso!");
-      });
+      })
+      .catch((error) => {});
   }
 
   function toggleProjectForm() {

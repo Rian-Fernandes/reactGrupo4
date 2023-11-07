@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import axios from "axios"; // Importe o Axios
 
 import ProjectForm from "../project/ProjectForm";
-
 import styles from "./NewProject.module.css";
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
@@ -9,21 +9,25 @@ import Footer from "../layout/Footer";
 function NewProject() {
   const navigate = useNavigate();
 
-  function createPost(project) {
+  async function createPost(project) {
     project.cost = 0;
     project.services = [];
 
-    fetch("http://localhost:5000/projects", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(project),
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        navigate("/projects", { message: "Produto criado com sucesso!" });
-      });
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/projects",
+        project,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      navigate("/projects", { message: "Produto criado com sucesso!" });
+    } catch (error) {
+      console.error("Erro ao criar o produto:", error);
+    }
   }
 
   return (
