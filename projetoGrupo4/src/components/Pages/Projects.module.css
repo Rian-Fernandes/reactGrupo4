@@ -6,4 +6,43 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 2em;
+  
+}
+
+.select {
+  padding: 20px;
+  border: 2px solid #e3d8ca;
+  border-radius: 5px;
+}
+
+
+.title_container h1 {
+  font-size: 24px;
+  color: #333;
+  color: #e7e7d2
+}
+
+
+.title_container .LinkButton {
+  margin-left: 10px;
+  text-decoration: none;
+  background-color: #0074d9;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+
+.select_box {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e3d8ca;
+  border-radius: 5px;
+  color: #e3d8ca
+}
+
+
+.select_box option {
+  background-color: #fff;
+  color: #333;
 }

@@ -4,10 +4,11 @@
   border-radius: 5px;
   width: 24%;
   margin: 0.5%;
+  background: #e7e7d2;
 }
 
 .project_card h4 {
-  background-color: #222;
+  background-color: #000e00;
   color: #ffbb33;
   padding: 0.4em;
   margin-bottom: 1.3em;
@@ -37,19 +38,19 @@
   margin-right: 5px;
 }
 
-.category_text .infra {
+.category_text .bonsai {
   background-color: #ffaebc;
 }
 
-.category_text .desenvolvimento {
+.category_text .cacto {
   background-color: #a0e7e5;
 }
 
-.category_text .design {
+.category_text .suculenta {
   background-color: #b4f8c8;
 }
 
-.category_text .planejamento {
+.category_text .plantas_de_jardim {
   background-color: #fbe7c6;
 }
 
@@ -69,7 +70,7 @@
   padding: 0.6em 1em;
   margin-right: 1em;
   cursor: pointer;
-  border: 1px solid #222;
+  border: 3px solid #e3d8ca;
   transition: 0.5s;
   display: flex;
   align-items: center;

@@ -76,13 +76,13 @@ function Projects() {
   return (
     <>
       <Navbar />
-      <div className={styles.project_container}>
+      <div className={styles.select}>
         <div className={styles.title_container}>
           <h1>Meus Produtos</h1>
           <LinkButton to="/newproject" text="Criar produtos" />
         </div>
         <div>
-          <select
+          <select className={styles.select_box}
             defaultValue={"all"}
             onChange={(e) => handleCategoryFilter(e.currentTarget.value)}
           >
