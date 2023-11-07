@@ -14,20 +14,13 @@ body {
 
 #root {
   height: 100%;
-  background: linear-gradient(
-    to right,
-    #576851 0%,
-    #576851 50%,
-    #a58567 50%,
-    #a58567 100%
-  );
 }
 
 body {
-  background-color: #576851;
+  background-color: #fff;
   color: white;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow: auto;
 }
 
 /*.body_home {
@@ -36,4 +29,14 @@ body {
 
 a {
   text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+  background-color: white;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #e8f4e1;
+  border-radius: 20px;
 }

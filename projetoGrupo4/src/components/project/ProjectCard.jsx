@@ -4,7 +4,7 @@ import woman from "../../Images/woman.png";
 
 import { BsPencil, BsFillTrashFill } from "react-icons/bs";
 
-function ProjectCard({ id, name, budget, category, handleRemove }) {
+function ProjectCard({ id, name, url, budget, category, handleRemove }) {
   const remove = (e) => {
     e.preventDefault();
     handleRemove(id);
@@ -12,8 +12,10 @@ function ProjectCard({ id, name, budget, category, handleRemove }) {
 
   return (
     <div className={styles.project_card}>
+      <div className={styles.urlImg}>
+        <img src={url} />
+      </div>
       <h4>{name}</h4>
-      <div>{/* <img src={woman} /> */}</div>
       <p>
         <span>Preço do produto:</span> R${budget}
       </p>

@@ -9,7 +9,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100%;
+  height: 100vh;
 }
 
 .home_container h1 {
@@ -38,4 +38,16 @@
     -50%
   ); /* Ajuste para alinhar horizontalmente no centro */
   z-index: -1;
+}
+
+.home_grad {
+  background: linear-gradient(
+    to right,
+    #576851 0%,
+    #576851 50%,
+    #a58567 50%,
+    #a58567 100%
+  );
+  /* height: 100%; */
+  /* position: relative; */
 }

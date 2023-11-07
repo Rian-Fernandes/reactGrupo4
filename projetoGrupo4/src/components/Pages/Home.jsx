@@ -7,23 +7,29 @@ import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 
 function Home() {
-  useEffect(() => {
-    document.body.style =
-      "background-image: linear-gradient(to right, #576851 0%, #576851 50%, #A58567 50%, #A58567 100%),";
-  }, []);
-
   return (
-    <>
+    <div className={styles.home_grad}>
       <Navbar />
-      <section className={styles.home_container}>
+      <div className={styles.home_container}>
         <h1>
           Bem vindo ao <span>Flor & Folha</span>
         </h1>
-        <p>Comece a gerenciar os seus produtos agora mesmo!</p>
+        <p>
+          Seja muito bem-vindo ao Flor & Folha,
+          <br /> o seu novo destino para gerenciar produtos de forma simples e
+          eficiente.
+          <br /> Com uma abordagem dedicada à praticidade e à beleza da
+          natureza,
+          <br /> estamos aqui para ajudá-lo a organizar e apresentar seus
+          produtos de forma única.
+          <br /> Comece agora a explorar as infinitas possibilidades que o<br />{" "}
+          Flor & Folha oferece e eleve a gestão dos seus produtos a um novo
+          patamar.
+        </p>
         <LinkButton to="/newproject" text="Cadastrar" />
-      </section>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

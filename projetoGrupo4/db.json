@@ -1,17 +1,6 @@
 {
   "projects": [
     {
-      "name": "Cristian",
-      "budget": "15000",
-      "category": {
-        "id": "1",
-        "name": "Cacto"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 1
-    },
-    {
       "name": "Teste",
       "budget": "213121",
       "category": {
@@ -21,6 +10,51 @@
       "cost": 0,
       "services": [],
       "id": 2
+    },
+    {
+      "name": "Teles",
+      "budget": "150",
+      "category": {
+        "id": "2",
+        "name": "Suculenta"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "Cacto do deserto",
+      "budget": "20",
+      "category": {
+        "id": "1",
+        "name": "Cacto"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "name": "Cacto",
+      "budget": "15",
+      "category": {
+        "id": "1",
+        "name": "Cacto"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
+    },
+    {
+      "url": "https://entreraizes.com.br/cdn/shop/files/IMG_9959.jpg?v=1690142428&width=480",
+      "name": "Me chupa",
+      "budget": "1000",
+      "category": {
+        "id": "2",
+        "name": "Suculenta"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 6
     }
   ],
   "categories": [

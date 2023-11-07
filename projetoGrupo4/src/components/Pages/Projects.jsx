@@ -13,6 +13,10 @@ import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 
 function Projects() {
+  useEffect(() => {
+    document.body.style = "background: #576851";
+  }, {});
+
   const [projects, setProjects] = useState([]);
   const [allProjects, setAllProjects] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -107,6 +111,7 @@ function Projects() {
               <ProjectCard
                 id={project.id}
                 name={project.name}
+                url={project.url}
                 budget={project.budget}
                 category={project.category.name}
                 key={project.id}

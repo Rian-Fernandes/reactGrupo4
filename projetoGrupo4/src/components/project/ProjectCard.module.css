@@ -85,3 +85,7 @@
   background-color: #222;
   color: #ffbb33;
 }
+
+.urlImg img {
+  max-width: 100%;
+}

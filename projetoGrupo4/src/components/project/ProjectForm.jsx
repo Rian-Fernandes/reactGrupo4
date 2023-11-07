@@ -60,6 +60,14 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         handleOnChange={handleChange}
         value={project.budget ? project.budget : ""}
       />
+      <Input
+        type="text"
+        name="url"
+        text="Digite a url da imagem"
+        handleOnChange={handleChange}
+        placeholder="Insira a url da imagem"
+        value={project.url ? project.url : ""}
+      />
       <Select
         name="category_id"
         text="Selecione a categoria"
@@ -67,7 +75,6 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         handleOnChange={handleCategory}
         value={project.category ? project.category.id : ""}
       />
-      <ImageCard />
       <SubmitButton text={btnText} />
     </form>
   );
