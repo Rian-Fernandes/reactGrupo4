@@ -54,27 +54,40 @@
         <p>
             Para poder ter acesso a página, você irá precisar de uma conta. Clique no botão "Registre-se", insira um e-mail e uma senha válida conforme mostrado nas imagens.
         </p>
-        <img src="/images_readme/login.png" alt="" width="300">
-        <img src="/images_readme/step1-1.png" alt="" width="300">
+        <img src="/images_readme/login.jpg" alt="" width="300">
+        <img src="/images_readme/cadastro.jpg" alt="" width="300">
     </li>
     <li>
-        <h3>Passo 2: Fazendo validação das credenciais</h3>
+        <h3>Passo 2: Acessando a home</h3>
         <p>
-            Após criar sua conta, insira as credenciais nos seus respectivos campos para acessar a página principal.
+            Após criar sua conta, insira as credenciais nos seus respectivos campos de login para acessar a página principal. Você será redirecionado para a página ilustrada na imagem abaixo:
         </p>
-        <img src="/images_readme/step2.png" alt="" width="300">
+        <img src="/images_readme/home.jpg" alt="" width="300">
+    </li>
+        <li>
+        <h3>Passo 3: Cadastrando produtos</h3>
+        <p>
+            Na home, busque pelo botão de cadastro, e após interagir com ele, você será redirecionado para a tela que contém o formulário de cadastro. Preencha os dados referentes ao item que você deseja cadastrar, e depois verifique o resultado na página de produtos:
+        </p>
+        <img src="/images_readme/cadastrar.jpg" alt="" width="300">
+        <img src="/images_readme/produtos.jpg" alt="" width="300">
     </li>
        <li>
-        <h3>Passo 3: Pesquisando informações climáticas</h3>
+        <h3>Passo 4: Deletando e atualizando produtos:</h3>
         <p>
-            Quando estiver dentro da página, vá até search e digitar o nome de uma localidade ao redor do globo que você gostaria de obter informações a respeito do clima. Temperaturas acima de 16°C exibirão um background-image com fundo vermelho, temperaturas abaixo dessa faixa, exibirão uma imagem de fundo azul. Faça bom proveito!
+           Dentro da página de produtos, cada card de exibição terá um botão para editar ou deletar um produto. Ao interagir com eles, o resultado será o seguinte, conforme mostrado nas imagens:
         </p>
-        <img src="/images_readme/step3.png" alt="" width="300">
-        <img src="/images_readme/step4.png" alt="" width="300">
-        <img src="/images_readme/step5.png" alt="" width="300">
+        <img src="/images_readme/editando.jpg" alt="" width="300">
+        <img src="/images_readme/deletando.jpg" alt="" width="300">
     </li>
 </ol>
     <hr>
-    <p>Feito por:<a href="https://github.com/Rian-Fernandes">Rian Fernandes</a></p>
+    <h2>Siga nossos colaboradores</h2>
+        <a href="https://github.com/Rian-Fernandes">Rian Fernandes</a></p>
+        <a href="http://github.com/leignel">Cristian Leignel</a></p>
+        <a href="https://github.com/sabrinapereiry">Sabrina Pereira</a></p>
+        <a href="https://github.com/YoloDesu">Bernardo Reuther</a></p>
+        <a href="https://github.com/PalomaPts">Paloma Tavares</a></p>
+        <a href="https://github.com/Igor-Arauj0">Igor araujo</a></p>
 </body>
 </html>
