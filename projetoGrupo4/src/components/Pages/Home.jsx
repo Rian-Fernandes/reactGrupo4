@@ -14,6 +14,7 @@ function Home() {
         <h1>
           Bem vindo ao <span>Flor & Folha</span>
         </h1>
+        <div className={styles.blocotexto}>
         <p>
           Seja muito bem-vindo ao Flor & Folha,
           <br /> o seu novo destino para gerenciar produtos de forma simples e
@@ -26,6 +27,7 @@ function Home() {
           Flor & Folha oferece e eleve a gestão dos seus produtos a um novo
           patamar.
         </p>
+        </div>
         <LinkButton to="/newproject" text="Cadastrar" />
       </div>
       <Footer />
