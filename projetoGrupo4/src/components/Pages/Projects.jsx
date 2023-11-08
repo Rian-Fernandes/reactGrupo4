@@ -11,7 +11,7 @@ import Message from "../layout/Message";
 import styles from "./Projects.module.css";
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
-import axios from "axios"; // Import Axios
+import axios from "axios";
 
 function Projects() {
   useEffect(() => {
@@ -40,9 +40,7 @@ function Projects() {
         const catResponse = await axios.get("http://localhost:5000/categories");
         setCategories(catResponse.data);
         setRemoveLoading(true);
-      } catch (error) {
-        // Handle error here
-      }
+      } catch (error) {}
     };
 
     fetchData();
@@ -55,9 +53,7 @@ function Projects() {
         setProjects(projects.filter((project) => project.id !== id));
         setProjectMessage("Produto removido com sucesso!");
       })
-      .catch((error) => {
-        // Handle error here
-      });
+      .catch((error) => {});
   }
 
   function handleCategoryFilter(selectedCategory) {
@@ -82,7 +78,8 @@ function Projects() {
           <LinkButton to="/newproject" text="Criar produtos" />
         </div>
         <div>
-          <select className={styles.select_box}
+          <select
+            className={styles.select_box}
             defaultValue={"all"}
             onChange={(e) => handleCategoryFilter(e.currentTarget.value)}
           >

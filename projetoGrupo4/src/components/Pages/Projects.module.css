@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 2em;
-  
 }
 
 .select {
@@ -15,13 +14,11 @@
   border-radius: 5px;
 }
 
-
 .title_container h1 {
   font-size: 24px;
   color: #333;
-  color: #e7e7d2
+  color: #e7e7d2;
 }
-
 
 .title_container .LinkButton {
   margin-left: 10px;
@@ -32,15 +29,13 @@
   border-radius: 5px;
 }
 
-
 .select_box {
   width: 100%;
   padding: 10px;
   border: 1px solid #e3d8ca;
   border-radius: 5px;
-  color: #e3d8ca
+  color: #e3d8ca;
 }
-
 
 .select_box option {
   background-color: #fff;

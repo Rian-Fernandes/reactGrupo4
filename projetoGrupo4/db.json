@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "Cacto Espinho de Cobra",
-      "budget": "15",
+      "budget": "30",
       "url": "https://acdn.mitiendanube.com/stores/002/064/189/products/opuntia-zebrina-21-63fe9f533748725f3e16742451122648-1024-1024.jpg",
       "category": {
         "id": "1",
@@ -11,18 +11,6 @@
       "cost": 0,
       "services": [],
       "id": 11
-    },
-    {
-      "name": "Cacto Cereus Peruvianus",
-      "budget": "25",
-      "url": "https://landing.suculentaria.com.br/wp-content/uploads/2022/06/16550468545801695122294109002439-rotated.jpg",
-      "category": {
-        "id": "1",
-        "name": "Cacto"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 12
     },
     {
       "name": "Cacto de Natal (Schlumbergera)",
@@ -239,6 +227,18 @@
       "cost": 0,
       "services": [],
       "id": 30
+    },
+    {
+      "name": "Bonsai Picea Glauca",
+      "budget": "25",
+      "url": "https://www.picturethisai.com/wiki-image/1080/153437607907295234.jpeg",
+      "category": {
+        "id": "3",
+        "name": "Bonsai"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 31
     }
   ],
   "categories": [
